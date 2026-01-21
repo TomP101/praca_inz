@@ -1,0 +1,79 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: praca_inz_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: app_user
+      POSTGRES_PASSWORD: app_password
+      POSTGRES_DB: tasks_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  task-api-service:
+    build: ./services/task-api-service
+    container_name: task_api_service
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgresql+psycopg2://app_user:app_password@postgres:5432/tasks_db
+    ports:
+      - "8000:8000"
+    command: >
+      uvicorn app.main:app --host 0.0.0.0 --port 8000
+
+  task-dispatcher-service:
+    build: ./services/task-dispatcher-service
+    container_name: task_dispatcher_service
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgresql+psycopg2://app_user:app_password@postgres:5432/tasks_db
+    command: >
+      python -m app.main
+
+  cpu-worker-service:
+    build: ./services/cpu-worker-service
+    container_name: cpu_worker_service
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgresql+psycopg2://app_user:app_password@postgres:5432/tasks_db
+      ENABLE_DB_ADMIN: "true"
+    command: >
+      python -m app.main
+
+  memory-worker-service:
+    build: ./services/memory-worker-service
+    container_name: memory_worker_service
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgresql+psycopg2://app_user:app_password@postgres:5432/tasks_db
+    command: >
+      python -m app.main
+
+  result-service:
+    build: ./services/result-service
+    container_name: result_service
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgresql+psycopg2://app_user:app_password@postgres:5432/tasks_db
+    ports:
+      - "8100:8000"
+    command: >
+      uvicorn app.main:app --host 0.0.0.0 --port 8000
+
+
+volumes:
+  postgres_data:

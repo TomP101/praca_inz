@@ -1,0 +1,41 @@
+{
+  "http": {
+    "count": 1800,
+    "ok_count": 1800,
+    "error_count": 0,
+    "error_rate": 0.0,
+    "p50_latency_ms": 60.69044998730533,
+    "p95_latency_ms": 93.49833000742363,
+    "p99_latency_ms": 129.6700299560325,
+    "achieved_rps": 10.0
+  },
+  "stats_diff": {
+    "total_tasks_before": 0,
+    "total_tasks_after": 1800,
+    "status_counts_before": {},
+    "status_counts_after": {
+      "COMPLETED": 1800
+    },
+    "delta_completed": 1800,
+    "avg_wait_time_sec_before": null,
+    "avg_wait_time_sec_after": 461.1436800038893,
+    "avg_run_time_sec_by_type_before": {
+      "CPU_INTENSIVE": null,
+      "IO_INTENSIVE": null,
+      "MEMORY_INTENSIVE": null
+    },
+    "avg_run_time_sec_by_type_after": {
+      "CPU_INTENSIVE": 0.10450769611111092,
+      "IO_INTENSIVE": null,
+      "MEMORY_INTENSIVE": null
+    },
+    "throughput_tasks_per_min_before": null,
+    "throughput_tasks_per_min_after": 98.06650089190575
+  },
+  "time_window_utc": {
+    "start_time_utc": "2025-12-25T12:21:53+00:00",
+    "end_time_utc": "2025-12-25T12:40:23+00:00",
+    "load_start_utc": "2025-12-25T12:21:53+00:00",
+    "load_end_utc": "2025-12-25T12:24:53+00:00"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "http": {
+    "count": 5000,
+    "ok_count": 5000,
+    "error_count": 0,
+    "error_rate": 0.0,
+    "p50_latency_ms": 44.8138999636285,
+    "p95_latency_ms": 48.58999001735356,
+    "p99_latency_ms": 67.98446599859818,
+    "achieved_rps": 50.0
+  },
+  "stats_diff": {
+    "total_tasks_before": 0,
+    "total_tasks_after": 5000,
+    "status_counts_before": {},
+    "status_counts_after": {
+      "COMPLETED": 5000
+    },
+    "delta_completed": 5000,
+    "avg_wait_time_sec_before": null,
+    "avg_wait_time_sec_after": 443.76079037460033,
+    "avg_run_time_sec_by_type_before": {
+      "CPU_INTENSIVE": null,
+      "MEMORY_INTENSIVE": null
+    },
+    "avg_run_time_sec_by_type_after": {
+      "CPU_INTENSIVE": null,
+      "MEMORY_INTENSIVE": 1.7658434036000041
+    },
+    "throughput_tasks_per_min_before": null,
+    "throughput_tasks_per_min_after": 472.42350241100155
+  },
+  "time_window_utc": {
+    "start_time_utc": "2026-01-19T23:28:02+00:00",
+    "end_time_utc": "2026-01-19T23:38:46+00:00",
+    "load_start_utc": "2026-01-19T23:28:02+00:00",
+    "load_end_utc": "2026-01-19T23:29:42+00:00"
+  }
+}

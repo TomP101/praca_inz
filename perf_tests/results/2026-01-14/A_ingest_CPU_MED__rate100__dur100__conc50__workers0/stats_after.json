@@ -1,0 +1,13 @@
+{
+  "total_tasks": 9620,
+  "status_counts": {
+    "PENDING": 9620
+  },
+  "avg_wait_time_sec": null,
+  "avg_run_time_sec_by_type": {
+    "CPU_INTENSIVE": null,
+    "IO_INTENSIVE": null,
+    "MEMORY_INTENSIVE": null
+  },
+  "throughput_tasks_per_min": null
+}

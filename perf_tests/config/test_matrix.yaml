@@ -1,0 +1,18 @@
+tests:
+  - test_id: Cpu_E2E_HIGH
+    task_type: CPU_INTENSIVE
+    complexity: 25
+    concurrency: 50
+    mode: end_to_end
+    schedule:
+      - rate: 50
+        duration_sec: 100
+
+  - test_id: Mem_E2E_HIGH
+    task_type: MEMORY_INTENSIVE
+    complexity: 175
+    concurrency: 50
+    mode: end_to_end
+    schedule:
+      - rate: 50
+        duration_sec: 100

@@ -1,0 +1,41 @@
+{
+  "http": {
+    "count": 3160,
+    "ok_count": 3160,
+    "error_count": 0,
+    "error_rate": 0.0,
+    "p50_latency_ms": 37.28345001582056,
+    "p95_latency_ms": 45.74537003354632,
+    "p99_latency_ms": 94.1025829716817,
+    "achieved_rps": 14.363636363636363
+  },
+  "stats_diff": {
+    "total_tasks_before": 0,
+    "total_tasks_after": 3160,
+    "status_counts_before": {},
+    "status_counts_after": {
+      "COMPLETED": 3160
+    },
+    "delta_completed": 3160,
+    "avg_wait_time_sec_before": null,
+    "avg_wait_time_sec_after": 448.439426216456,
+    "avg_run_time_sec_by_type_before": {
+      "CPU_INTENSIVE": null,
+      "IO_INTENSIVE": null,
+      "MEMORY_INTENSIVE": null
+    },
+    "avg_run_time_sec_by_type_after": {
+      "CPU_INTENSIVE": 32.930878236075905,
+      "IO_INTENSIVE": null,
+      "MEMORY_INTENSIVE": null
+    },
+    "throughput_tasks_per_min_before": null,
+    "throughput_tasks_per_min_after": 225.38017436282806
+  },
+  "time_window_utc": {
+    "start_time_utc": "2026-01-19T11:36:58+00:00",
+    "end_time_utc": "2026-01-19T11:51:16+00:00",
+    "load_start_utc": "2026-01-19T11:36:58+00:00",
+    "load_end_utc": "2026-01-19T11:40:36+00:00"
+  }
+}

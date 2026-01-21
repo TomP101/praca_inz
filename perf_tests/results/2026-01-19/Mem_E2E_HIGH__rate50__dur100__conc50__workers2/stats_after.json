@@ -1,0 +1,12 @@
+{
+  "total_tasks": 5000,
+  "status_counts": {
+    "COMPLETED": 5000
+  },
+  "avg_wait_time_sec": 443.76079037460033,
+  "avg_run_time_sec_by_type": {
+    "CPU_INTENSIVE": null,
+    "MEMORY_INTENSIVE": 1.7658434036000041
+  },
+  "throughput_tasks_per_min": 472.42350241100155
+}

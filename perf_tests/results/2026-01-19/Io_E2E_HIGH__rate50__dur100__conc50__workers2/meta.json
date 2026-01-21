@@ -1,0 +1,25 @@
+{
+  "project_name": "praca-inz",
+  "test_id": "Io_E2E_HIGH",
+  "task_type": "IO_INTENSIVE",
+  "complexity": 25,
+  "rate": 50.0,
+  "duration_sec": 100,
+  "concurrency": 50,
+  "mode": "end_to_end",
+  "schedule": [
+    {
+      "rate": 50,
+      "duration_sec": 100
+    }
+  ],
+  "urls": {
+    "task_api_base_url": "http://praca-inz-3a2c06-alb-736565346.eu-north-1.elb.amazonaws.com",
+    "result_service_base_url": "http://praca-inz-3a2c06-alb-736565346.eu-north-1.elb.amazonaws.com"
+  },
+  "autoscaling": "on",
+  "workers": "2",
+  "start_time_utc": "2026-01-19T20:58:25+00:00",
+  "end_time_utc": null,
+  "notes": ""
+}

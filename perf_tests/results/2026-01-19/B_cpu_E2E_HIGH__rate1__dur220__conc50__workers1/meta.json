@@ -1,0 +1,37 @@
+{
+  "project_name": "praca-inz",
+  "test_id": "B_cpu_E2E_HIGH",
+  "task_type": "CPU_INTENSIVE",
+  "complexity": 25,
+  "rate": 1.0,
+  "duration_sec": 220,
+  "concurrency": 50,
+  "mode": "end_to_end",
+  "schedule": [
+    {
+      "rate": 1,
+      "duration_sec": 80
+    },
+    {
+      "rate": 50,
+      "duration_sec": 60
+    },
+    {
+      "rate": 1,
+      "duration_sec": 80
+    }
+  ],
+  "urls": {
+    "task_api_base_url": "http://praca-inz-941acf-alb-1390201762.eu-north-1.elb.amazonaws.com",
+    "result_service_base_url": "http://praca-inz-941acf-alb-1390201762.eu-north-1.elb.amazonaws.com"
+  },
+  "autoscaling": "off",
+  "workers": "1",
+  "start_time_utc": "2026-01-19T11:36:58+00:00",
+  "end_time_utc": "2026-01-19T11:51:16+00:00",
+  "notes": "",
+  "load_window_utc": {
+    "load_start": "2026-01-19T11:36:58+00:00",
+    "load_end": "2026-01-19T11:40:36+00:00"
+  }
+}

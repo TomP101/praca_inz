@@ -1,0 +1,29 @@
+{
+  "project_name": "praca-inz",
+  "test_id": "Mem_E2E_HIGH",
+  "task_type": "MEMORY_INTENSIVE",
+  "complexity": 150,
+  "rate": 50.0,
+  "duration_sec": 10,
+  "concurrency": 50,
+  "mode": "end_to_end",
+  "schedule": [
+    {
+      "rate": 50,
+      "duration_sec": 10
+    }
+  ],
+  "urls": {
+    "task_api_base_url": "http://praca-inz-e4ed2e-alb-344123764.eu-north-1.elb.amazonaws.com",
+    "result_service_base_url": "http://praca-inz-e4ed2e-alb-344123764.eu-north-1.elb.amazonaws.com"
+  },
+  "autoscaling": "on",
+  "workers": "2",
+  "start_time_utc": "2026-01-19T22:57:28+00:00",
+  "end_time_utc": "2026-01-19T22:58:23+00:00",
+  "notes": "",
+  "load_window_utc": {
+    "load_start": "2026-01-19T22:57:28+00:00",
+    "load_end": "2026-01-19T22:57:38+00:00"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "project_name": "praca-inz",
+  "test_id": "A_ingest_CPU_MED_S2",
+  "task_type": "CPU_INTENSIVE",
+  "complexity": 5,
+  "rate": 10.0,
+  "duration_sec": 100,
+  "concurrency": 50,
+  "mode": "ingest",
+  "schedule": [
+    {
+      "rate": 10,
+      "duration_sec": 40
+    },
+    {
+      "rate": 80,
+      "duration_sec": 20
+    },
+    {
+      "rate": 10,
+      "duration_sec": 40
+    }
+  ],
+  "urls": {
+    "task_api_base_url": "http://praca-inz-3025c2-alb-1003027389.eu-north-1.elb.amazonaws.com",
+    "result_service_base_url": "http://praca-inz-3025c2-alb-1003027389.eu-north-1.elb.amazonaws.com"
+  },
+  "autoscaling": "off",
+  "workers": "0",
+  "start_time_utc": "2026-01-17T10:34:36+00:00",
+  "end_time_utc": null,
+  "notes": ""
+}
